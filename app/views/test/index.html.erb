@@ -1,0 +1,45 @@
+<h1>Test#index</h1>
+<p>Find me in app/views/test/index.html.erb</p>
+
+<form action="test/index" >
+  <p>
+    Week:
+    <%= week_field_tag :week %>
+  </p>
+
+  <p>
+    Date:
+    <%= date_field_tag :date %>
+  </p>
+
+  <p>
+    Datetime:
+    <%= datetime_field_tag :datetime %>
+  </p>
+
+  <p>
+    Local datetime:
+    <%= datetime_local_field_tag :datetime %>
+  </p>
+
+  <p>
+    Time:
+    <%= time_field_tag :time %>
+  </p>
+
+  <p>
+    Month:
+    <%= month_field_tag :month %>
+  </p>
+
+  <p>
+    Color:
+    <%= color_field_tag :color %>
+  </p>
+
+  <p>
+    <%= highlight 'test one two three', 'one'%>
+  </p>
+
+  <button>Submit</button>
+</form>
