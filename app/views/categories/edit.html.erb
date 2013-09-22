@@ -1,0 +1,17 @@
+<h1>Editing category</h1>
+
+<!-- <%= render 'form' %> -->
+<%= form_for @category do |f| %>
+  <%= f.text_field :name %>
+
+  <%= f.collection_check_boxes :product_ids, Product.all, :id, :title do |b| %>
+    <br />
+    <%= b.label(:"data-value" => b.value) { b.check_box + ' ' + b.text } %>
+  <% end %>
+ 
+   <br />
+   <%= f.submit %>
+<% end %>
+
+<%= link_to 'Show', @category %> |
+<%= link_to 'Back to list of categories', categories_path %>

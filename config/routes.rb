@@ -1,5 +1,9 @@
 CatchUpWithRor4::Application.routes.draw do
   
+  resources :categories
+
+  resources :products
+
   get "test/index"
 
   # The priority is based upon order of creation: first created -> highest priority.
