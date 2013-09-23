@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
+  # before_filter # were in Rails 3
+  
   def index
     @products = Product.all
   end
