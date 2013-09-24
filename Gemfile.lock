@@ -10,6 +10,10 @@ GEM
       erubis (~> 2.7.0)
       rack (~> 1.5.2)
       rack-test (~> 0.6.2)
+    actionpack-action_caching (1.0.0)
+      actionpack (>= 4.0.0.beta, < 5.0)
+    actionpack-page_caching (1.0.0)
+      actionpack (>= 4.0.0.beta, < 5.0)
     activemodel (4.0.0)
       activesupport (= 4.0.0)
       builder (~> 3.1.0)
@@ -27,7 +31,11 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.14)
+    awesome_print (1.1.0)
     builder (3.1.4)
+    cache_digests (0.3.1)
+      actionpack (>= 3.2)
+      thread_safe
     coderay (1.0.9)
     coffee-rails (4.0.0)
       coffee-script (>= 2.2.0)
@@ -36,8 +44,18 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    columnize (0.3.6)
     daemons (1.1.9)
     database_cleaner (1.1.1)
+    debugger (1.6.1)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.3)
+    debugger-linecache (1.2.0)
+    debugger-pry (0.1.1)
+      debugger (~> 1)
+      pry (>= 0.9.9)
+    debugger-ruby_core_source (1.2.3)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.0.1)
@@ -131,8 +149,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionpack-action_caching
+  actionpack-page_caching
+  awesome_print
+  cache_digests
   coffee-rails (~> 4.0.0)
   database_cleaner
+  debugger-pry
   factory_girl_rails
   jbuilder (~> 1.2)
   jquery-rails

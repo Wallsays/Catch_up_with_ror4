@@ -1,24 +1,29 @@
-<p id="notice"><%= notice %></p>
+<% cache @product do %>
+<% #cache ['v3', @product] do # this not needed with gem 'cache_digests'%>
 
-<p>
-  <strong>Title:</strong>
-  <%= @product.title %>
-</p>
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Body:</strong>
-  <%= @product.body %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @product.title %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category.name %>
-</p>
+  <p>
+    <strong>Body:</strong>
+    <%= @product.body %>
+  </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+  <p>
+    <strong>Category:</strong>
+    <%= @product.category.name %>
+  </p>
 
-<h2>Comments</h2>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
 
-<%= render "comments/comments" %>
-<%= render "comments/form" %>
+  <h2>Comments</h2>
+
+  <%= render "comments/comments" %>
+  <%= render "comments/form" %>
+
+<% end %>
