@@ -1,8 +1,12 @@
 CatchUpWithRor4::Application.routes.draw do
   
-  resources :categories
-
-  resources :products
+  resources :categories do 
+    resources :comments
+  end
+  
+  resources :products do 
+    resources :comments
+  end
 
   get "test/index"
 

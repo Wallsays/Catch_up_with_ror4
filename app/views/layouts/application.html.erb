@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CatchUpWithRor4</title>
+  <title>Catch Up With RoR 4</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <%= content_tag :div, warning if warning %>
+  <%= content_tag :div, flash[:warning] if flash[:warning] %>
   <div class="container" class="row">
     <%= yield %>  
   </div>
