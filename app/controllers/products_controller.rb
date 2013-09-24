@@ -7,6 +7,9 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @commentable = @product
+    @comments = @commentable.comments
+    @comment = Comment.new
   end
 
   def new
