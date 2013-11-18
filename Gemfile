@@ -30,7 +30,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :development, :test do
-  gem 'thin'
+  # gem 'thin'
+  gem 'puma'
 
   gem 'pry-rails'
   gem 'database_cleaner'

@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function() {
+  var source = new EventSource('/stream');
+  source.onmessage = function(e){
+    console.log(e);
+  };
+});   

@@ -1,5 +1,10 @@
 CatchUpWithRor4::Application.routes.draw do
   
+  root "test#index"
+
+  # get "stream/index"
+  resources :stream, only: [:index] #/stream
+  get "stream/index"
   resources :categories do 
     resources :comments
   end
